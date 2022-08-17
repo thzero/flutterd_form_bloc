@@ -7,7 +7,7 @@ import 'package:flutter_form_bloc/flutter_form_bloc.dart';
 
 import 'package:flutterd/ui/mixins/material/platform.dart';
 
-import 'package:flutterd/ui/mixins/platform.dart';
+import 'package:flutterd_form_bloc/ui/mixins/platform_input.dart';
 
 mixin MaterialFormBlocInputPlatformMixin on InputPlatformMixin, MaterialPlatformMixin {
   @override
@@ -26,7 +26,7 @@ mixin MaterialFormBlocInputPlatformMixin on InputPlatformMixin, MaterialPlatform
       decoration: InputDecoration(labelText: title, hintText: hint),
       animateWhenCanShow: false,
       colorPicker: (BuildContext? context, Color? initial) {
-        return showDialogColor(context!, colors: colors, previous: initial!);
+        return showDialogColor(context!, colorsOverride: colors, previous: initial!);
       },
       initialColor: Colors.transparent,
     );
