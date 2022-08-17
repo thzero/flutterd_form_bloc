@@ -23,7 +23,7 @@ dependencies:
     git:
       url: https://github.com/thzero/flutterd_logging_wrapper
   bloc: ^8.1.0
-  flutter_bloc: ^8.0.1
+  flutter_bloc: ^8.1.1
   flutter_form_bloc:
     path: ../form_bloc/packages/flutter_form_bloc
   flutter_i18n: ^0.32.4
