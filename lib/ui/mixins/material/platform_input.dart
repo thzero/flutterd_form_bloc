@@ -88,4 +88,19 @@ mixin MaterialFormBlocInputPlatformMixin on InputPlatformMixin, MaterialPlatform
       decoration: InputDecoration(labelText: title, hintText: hint),
     );
   }
+
+  @override
+  Widget constructInputTextArea<T extends TextFieldBloc<dynamic>>(BuildContext context, T value, String title, String? hint,
+      {int maxLines = 5, int minLines = 1, int? maxLength = 500, MaxLengthEnforcement maxLengthEnforced = MaxLengthEnforcement.enforced, bool readOnly = false}) {
+    return TextFieldBlocBuilder(
+      textFieldBloc: value,
+      readOnly: readOnly,
+      decoration: InputDecoration(labelText: title, hintText: hint),
+      keyboardType: TextInputType.multiline,
+      maxLength: maxLength,
+      maxLengthEnforced: maxLengthEnforced,
+      maxLines: maxLines,
+      minLines: minLines,
+    );
+  }
 }
